@@ -1,8 +1,13 @@
 <div class="board">
-   <div class="board-wrapper">
-     <div class="board-columns">
-       <div class="board-column"></div>
-       <div class="board-column"></div>
-     </div>
-   </div>
- </div>
+  <div class="board-wrapper">
+      <div class="board-column">
+        <app-todo-item
+          @todoItemAnim
+          *ngFor="let todo of todos"
+          [todo]="todo"
+          (click)="toggleCompleted(todo)"
+          (deleteClick)="onDeleteClick(todo)"
+        ></app-todo-item>
+      </div>
+  </div>
+</div>

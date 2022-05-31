@@ -1,0 +1,85 @@
+@import "../../var.scss";
+.tabs {
+  display: flex;
+  align-items: center;
+}
+
+.tab.selected {
+  filter: opacity(70%);
+}
+
+.menu-open {
+  display: none;
+}
+
+.menu-item {
+  margin-left: -80px;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.menu-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: $main-color1;
+  transition: width 0.5s;
+}
+
+.menu-item:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  background-color: $main-color1;
+  transition: width 0.5s;
+}
+
+.menu-open-button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(0.8);
+  }
+}
+
+$menu-items: 2;
+.menu-open:checked ~ .menu-item {
+  opacity: 1;
+  @for $i from 1 through $menu-items {
+    &:nth-child(#{$i + 2}) {
+      transition-duration: 90ms+ (100ms * $i);
+      transform: translate3d(-80px * $i, 0, 0);
+    }
+  }
+}
+
+@media (max-width: 548px) {
+  .menu-open-button img {
+    width: 35px;
+    height: 35px;
+  }
+  .tab img {
+    width: 20px;
+    height: 20px;
+  }
+  .menu-item {
+    margin-left: -50px;
+  }
+  .menu-open:checked ~ .menu-item {
+    opacity: 1;
+    @for $i from 1 through $menu-items {
+      &:nth-child(#{$i + 2}) {
+        transition-duration: 90ms+ (100ms * $i);
+        transform: translate3d(-50px * $i, 0, 0);
+      }
+    }
+  }
+}

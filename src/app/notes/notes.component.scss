@@ -1,0 +1,42 @@
+@import "../../var.scss";
+.notes-wrapper {
+  margin-bottom: 20px;
+}
+.notes-list {
+  max-width: 1015px;
+  height: 510px;
+  background: #ffffff1c;
+  border-radius: 10px;
+  padding: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 23px;
+  cursor: pointer;
+}
+.btn {
+  margin-top: 20px;
+  padding: 14px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
+  background-color: $main-color1;
+  color: $main-color2;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.center {
+  max-width: 50px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}

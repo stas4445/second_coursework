@@ -1,0 +1,31 @@
+@import "../var.scss";
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: baseline;
+  font-family: $main-font2, $main-font1;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  justify-content: space-between;
+  .header__date {
+    font-weight: 600;
+    font-size: 48px;
+  }
+}
+.header__btn {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 548px) {
+  .header {
+    align-items: center;
+  }
+  .header__date {
+    font-size: 33px !important;
+    font-weight: 800 !important;
+  }
+}

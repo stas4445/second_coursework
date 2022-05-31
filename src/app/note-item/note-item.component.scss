@@ -1,0 +1,28 @@
+@import "../../var.scss";
+.note-card {
+  position: relative;
+  padding: 18px;
+  width: 303px;
+  height: 212px;
+  border-radius: 10px;
+  background: #00000033;
+  transition: all 0.2s;
+  overflow-y: auto;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.note-card__title {
+  font-family: $main-font2, $main-font1;
+  font-weight: 500;
+  font-size: 28px;
+  padding-bottom: 7px;
+}
+.note-card__content {
+  font-family: $main-font1;
+  font-size: 21px;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}

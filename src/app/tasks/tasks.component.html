@@ -1,1 +1,15 @@
-<p>tasks works!</p>
+<section class="tasks">
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <footer class="tasks__forms">
+      <input
+        class="textbox"
+        ngModel
+        #titleField="ngModel"
+        name="title"
+        type="text"
+        placeholder="Create your own task..."
+      />
+      <button type="submit" class="btn">+</button>
+    </footer>
+  </form>
+</section>

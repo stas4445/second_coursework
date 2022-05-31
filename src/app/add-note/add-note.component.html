@@ -1,1 +1,29 @@
-<p>add-note works!</p>
+<div class="form-container">
+  <header>
+    <h1>New</h1>
+    <img routerLink="../" src="../../assets/img/cancel.svg" />
+  </header>
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <div class="forms">
+      <div class="form-field">
+        <input
+          class="textbox"
+          ngModel
+          #titleField="ngModel"
+          name="title"
+          type="text"
+          placeholder="Title"
+        />
+      </div>
+      <div class="form-field">
+        <textarea
+          class="textarea"
+          class="textarea"
+          ngModel
+          name="content"
+        ></textarea>
+      </div>
+    </div>
+    <button class="btn"><span>+</span>Add</button>
+  </form>
+</div>

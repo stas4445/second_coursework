@@ -1,0 +1,40 @@
+@import "../../var.scss";
+.tasks {
+  text-align: left;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  .tasks__forms {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  input {
+    margin-top: 40px;
+    height: 48px;
+    border-radius: 10px;
+    width: 380px;
+    padding: 5px 16px;
+    color: #ffffffb0;
+    background-color: $main-color1;
+    font-family: $main-font2, $main-font1;
+  }
+  .btn {
+    padding: 18px 24px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: $main-color1;
+    color: $main-color2;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: 548px) {
+  input {
+    width: 70vw !important;
+  }
+}

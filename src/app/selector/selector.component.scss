@@ -1,0 +1,22 @@
+@import "../../var.scss";
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $main-font2, $main-font1;
+  gap: 48px;
+  margin-bottom: 38px;
+  span {
+    font-weight: 500;
+    font-size: 32px;
+  }
+  img {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 548px) {
+  span {
+    font-size: 25px !important;
+  }
+}

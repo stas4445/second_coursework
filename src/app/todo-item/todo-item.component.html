@@ -1,1 +1,11 @@
-<p>todo-item works!</p>
+<div class="todo-item" [class.completed]="todo.completed">
+  <div class="check-box">
+    <i class="material-icons">check</i>
+  </div>
+  <p class="todo-text">{{ todo.text }}</p>
+  <div class="move-btn">
+    <div class="btn todo-item-action-btn" (click)="onDeleteClick()">
+      <i class="material-icons">delete</i>
+    </div>
+  </div>
+</div>

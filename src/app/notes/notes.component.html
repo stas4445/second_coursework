@@ -1,1 +1,10 @@
-<p>notes works!</p>
+<div class="notes-wrapper">
+  <div class="container">
+    <div class="notes-list">
+      <a [routerLink]="[note.id]" *ngFor="let note of notes">
+         <app-note-item [note]="note"></app-note-item>
+     </a>
+    </div>
+    <div class="center"><button routerLink="add" class="btn">+</button></div>
+  </div>
+</div>

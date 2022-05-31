@@ -1,30 +1,30 @@
-.board {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  min-width: 0;
-  min-height: 0;
+.board-wrapper {
+  margin-top: -50px;
+  margin-bottom: 65px;
+  .board-column {
+    overflow-y: auto;
+    width: 600px;
+    padding: 15px;
+    height: 550px;
+    border-radius: 10px;
+    background: #ffffff1c;
+  }
+}
+app-todo-item {
+  display: block;
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
 
-  .board-wrapper {
-    display: flex;
-    flex-grow: 1;
-    // overflow-x: auto;
+@media (max-width: 1189px) {
+  .board-column {
+    max-width: 500px;
+  }
+}
 
-    .board-columns {
-      display: flex;
-      flex-grow: 1;
-
-      .board-column {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        flex-basis: 0; // to force the columns to all be the same size, regardless of content
-        min-width: 400px;
-        margin: 50px;
-        padding: 25px;
-        border-radius: 10px;
-        background: rgba(white, 0.5);
-      }
-    }
+@media (max-width: 548px) {
+  .board-column {
+    max-width: 90vw;
   }
 }

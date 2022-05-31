@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./var.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  &::selection {
+    background: #0000004d;
+  }
+}
+html,
+body {
+  font-family: $main-font1;
+}
+body {
+  height: 100vh;
+  background: $bground-col;
+  color: $main-color1;
+}
+a {
+  color: $main-color1;
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+textarea {
+  resize: none;
+}
+button {
+  border: none;
+}
+.container {
+  max-width: 1194px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+@media (max-width: 1189px) {
+  body {
+    background: #e68762d4;
+  }
+}
+
+@media (max-width: 548px) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
